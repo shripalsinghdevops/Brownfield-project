@@ -1,61 +1,61 @@
 rgs = {
 
-rg1 = {
+  rg1 = {
 
-name = "shri"
-location = "centralindia"
-}
+    name     = "shri"
+    location = "centralindia"
+  }
 }
 
 vnet = {
 
-vnet1 = {
+  vnet1 = {
 
-name     = "vnet"
-location = "centralindia"
-resource_group_name = "shri"
-address_space       = ["10.0.0.0/16"]
-}
+    name                = "vnet"
+    location            = "centralindia"
+    resource_group_name = "shri"
+    address_space       = ["10.0.0.0/16"]
+  }
 }
 
 subnet = {
 
-subnet1 = {
-name     = "frontend"
-resource_group_name = "shri"
-virtual_network_name = "vnet"
-address_prefixes = ["10.0.1.0/24"]
-}
-subnet2 = {
-name     = "backend"
-resource_group_name = "shri"
-virtual_network_name = "vnet"
-address_prefixes = ["10.0.2.0/24"]
-}
+  subnet1 = {
+    name                 = "frontend"
+    resource_group_name  = "shri"
+    virtual_network_name = "vnet"
+    address_prefixes     = ["10.0.1.0/24"]
+  }
+  subnet2 = {
+    name                 = "backend"
+    resource_group_name  = "shri"
+    virtual_network_name = "vnet"
+    address_prefixes     = ["10.0.2.0/24"]
+  }
 }
 
 pubip = {
-pubip1 = {
+  pubip1 = {
 
-        name                = "Pubip-frontend"
-resource_group_name = "shri"
-location            = "centralindia"
-allocation_method   = "Static"
-}
+    name                = "Pubip-frontend"
+    resource_group_name = "shri"
+    location            = "centralindia"
+    allocation_method   = "Static"
+  }
 }
 
 nic = {
 
-nic1 = {
+  nic1 = {
 
-name                = "nic1"
-location            = "centralindia"
-resource_group_name = "shri"
-subnet_name         = "frontend"
-virtual_network_name = "vnet"
-pubip_name           = "Pubip-frontend"
-ip_cofig_name        = "internal"
-private_ip_address_allocation = "Dynamic"
+    name                          = "nic1"
+    location                      = "centralindia"
+    resource_group_name           = "shri"
+    subnet_name                   = "frontend"
+    virtual_network_name          = "vnet"
+    pubip_name                    = "Pubip-frontend"
+    ip_cofig_name                 = "internal"
+    private_ip_address_allocation = "Dynamic"
 
-}
+  }
 }
