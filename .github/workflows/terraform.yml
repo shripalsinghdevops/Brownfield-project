@@ -25,7 +25,26 @@ jobs:
       # Checkout Code
       - name: Checkout Repository
         uses: actions/checkout@v4
+      - name: Check Azure Secrets
+        shell: bash
+        run: |
+          if [ -n "${{ secrets.AZURE_CLIENT_ID }}" ]; then
+            echo "AZURE_CLIENT_ID is available"
+          else
+            echo "AZURE_CLIENT_ID is NOT available"
+          fi
 
+          if [ -n "${{ secrets.AZURE_TENANT_ID }}" ]; then
+            echo "AZURE_TENANT_ID is available"
+          else
+            echo "AZURE_TENANT_ID is NOT available"
+          fi
+
+          if [ -n "${{ secrets.AZURE_SUBSCRIPTION_ID }}" ]; then
+            echo "AZURE_SUBSCRIPTION_ID is available"
+          else
+            echo "AZURE_SUBSCRIPTION_ID is NOT available"
+          fi
       # Azure Authentication using OIDC / WIF
       - name: Azure Login
         uses: azure/login@v2
