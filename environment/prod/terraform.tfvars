@@ -13,7 +13,7 @@ vnet = {
 
     name                = "vnet1"
     location            = "centralindia"
-    resource_group_name = "shri"
+    resource_group_name = "shri1"
     address_space       = ["10.0.0.0/16"]
   }
 }
