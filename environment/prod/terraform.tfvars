@@ -2,7 +2,7 @@ rgs = {
 
   rg1 = {
 
-    name     = "shri"
+    name     = "shri1"
     location = "centralindia"
   }
 }
@@ -11,7 +11,7 @@ vnet = {
 
   vnet1 = {
 
-    name                = "vnet"
+    name                = "vnet1"
     location            = "centralindia"
     resource_group_name = "shri"
     address_space       = ["10.0.0.0/16"]
